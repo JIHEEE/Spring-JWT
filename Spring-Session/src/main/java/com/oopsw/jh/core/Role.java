@@ -1,4 +1,4 @@
-package com.oopsw.jh.dto;
+package com.oopsw.jh.core;
 
 public enum Role {
     ADMIN, USER

@@ -1,5 +1,7 @@
 package com.oopsw.jh.dto;
 
+import com.oopsw.jh.core.Role;
+
 import lombok.Builder;
 import lombok.Getter;
 

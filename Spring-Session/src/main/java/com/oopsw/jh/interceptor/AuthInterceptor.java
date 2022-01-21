@@ -5,13 +5,13 @@ import lombok.extern.slf4j.Slf4j;
 import org.springframework.stereotype.Component;
 import org.springframework.web.servlet.HandlerInterceptor;
 
-import com.oopsw.jh.dto.Role;
+import com.oopsw.jh.core.Role;
 import com.oopsw.jh.exception.CustomAuthenticationException;
+
+import static com.oopsw.jh.core.SecurityConstants.*;
 
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
-
-import static com.oopsw.jh.interceptor.SecurityConstants.*;
 
 @Slf4j
 @Component
