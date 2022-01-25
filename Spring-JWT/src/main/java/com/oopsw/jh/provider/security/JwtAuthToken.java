@@ -57,16 +57,17 @@ public class JwtAuthToken implements AuthToken<Claims> {
             log.info("JWT token compact of handler are invalid.");
             throw new CustomJwtRuntimeException();
         }
+        
     }
 
     private Optional<String> createJwtAuthToken(String id, String role, Date expiredDate) {
 
         var token = Jwts.builder()
-                .setSubject(id)
-                .claim(AUTHORITIES_KEY, role)
-                .signWith(key, SignatureAlgorithm.HS256)
-                .setExpiration(expiredDate)
-                .compact();
+                .setSubject(id)								// token 용도
+                .claim(AUTHORITIES_KEY, role)				// claim 설정
+                .signWith(key, SignatureAlgorithm.HS256)	// HS256과 Key로 Sign
+                .setExpiration(expiredDate)					// token 만료 시간 설정
+                .compact();									// token 생성
 
         return Optional.ofNullable(token);
     }

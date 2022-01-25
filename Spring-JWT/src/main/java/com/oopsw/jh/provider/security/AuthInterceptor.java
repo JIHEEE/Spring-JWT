@@ -43,6 +43,7 @@ public class AuthInterceptor implements HandlerInterceptor {
         } else {
             throw new CustomAuthenticationException();
         }
+        
     }
 
     private Optional<String> resolveToken(HttpServletRequest request) {
