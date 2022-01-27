@@ -16,4 +16,5 @@ public class JwtConfiguration {
     public JwtAuthTokenProvider jwtProvider() {
         return new JwtAuthTokenProvider(secret);
     }
+    
 }

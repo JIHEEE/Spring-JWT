@@ -25,7 +25,9 @@ public class CoffeeController {
 
     @GetMapping
     public List<CoffeeDTO> getAllCoffees(HttpSession session) {
+    	
         return coffeeService.findAll().orElse(Collections.emptyList());
+        
     }
     
 }
